@@ -1,0 +1,20 @@
+# ninja log v6
+2	10	7649997068260934	clean	f1c0810b4f0350db
+4	327	7656773597186175	CMakeFiles/Final_Project_C_.dir/main.cpp.obj	87c68d22bdbe83c0
+7	2612	7652442866262017	CMakeFiles/Final_Project_C_.dir/roulette.cpp.obj	d88a5bc983fae43f
+5	369	7656094150459169	CMakeFiles/Final_Project_C_.dir/casino_war.cpp.obj	2b85fdffac74bd6d
+5	393	7656782174669233	CMakeFiles/Final_Project_C_.dir/blackjack.cpp.obj	6979fa9bcc95824e
+9	614	7655579525220155	CMakeFiles/Final_Project_C_.dir/carddeck.cpp.obj	6cb365896f8d0857
+15	423	7646573634516913	CMakeFiles/Final_Project_C_.dir/cardutils.cpp.obj	e421a67a3c96f0dc
+5	225	7655094135983399	build.ninja	1cc9d81b1cba46ad
+393	498	7656782178547963	Final_Project_C_.exe	bb051419eb3e4ec8
+5	572	7656783241227662	CMakeFiles/Final_Project_C_.dir/blackjack.cpp.obj	6979fa9bcc95824e
+573	736	7656783246908930	Final_Project_C_.exe	bb051419eb3e4ec8
+4	410	7656789370681945	CMakeFiles/Final_Project_C_.dir/blackjack.cpp.obj	6979fa9bcc95824e
+411	518	7656789374747762	Final_Project_C_.exe	bb051419eb3e4ec8
+4	391	7656790518665467	CMakeFiles/Final_Project_C_.dir/blackjack.cpp.obj	6979fa9bcc95824e
+392	497	7656790522540065	Final_Project_C_.exe	bb051419eb3e4ec8
+4	682	7656815353333586	CMakeFiles/Final_Project_C_.dir/blackjack.cpp.obj	6979fa9bcc95824e
+683	895	7656815360117621	Final_Project_C_.exe	bb051419eb3e4ec8
+4	392	7656817030793406	CMakeFiles/Final_Project_C_.dir/blackjack.cpp.obj	6979fa9bcc95824e
+393	487	7656817034688766	Final_Project_C_.exe	bb051419eb3e4ec8
