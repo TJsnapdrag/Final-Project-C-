@@ -118,7 +118,7 @@ void playBlackjack(Player &user) {
 			cout << "Wow! You tied with the dealer!" << endl;
 		}
 
-		cout << "Would you like to play Blackjack again? Enter Y any other character to return to menu: " << endl;
+		cout << "Would you like to play Blackjack again? Enter Y for yes or any other character to return to menu: " << endl;
 	cin >> playAgain;
 	}
 
