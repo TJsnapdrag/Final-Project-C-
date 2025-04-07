@@ -31,8 +31,5 @@ Card Deck::dealCard(){
   Card topCard = cards.back(); //get last vector card or the top deck value
   cards.pop_back();     //remove that card from the deck
   return topCard;  //return the dealt card to what called it
-}
-//if the deck runs out, alerts us, game can be restarted to shuffle new deck
-bool Deck::isEmpty(){
-  return cards.empty();
+
 }

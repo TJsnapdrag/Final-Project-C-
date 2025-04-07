@@ -5,11 +5,11 @@
 using namespace std;
 
 
-//new structure
+//holds player information
 struct Player {
   string name;
   int chips;
 };
-
+//added to text file
 
 #endif //PLAYER_H
