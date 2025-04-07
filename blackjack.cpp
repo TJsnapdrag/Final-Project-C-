@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "carddeck.h" // Accesses the Deck class and Card structure for card dealing and shuffling
-#include "player.h"   // Accesses Player class for chip management and user information'
+#include "player.h"   // Accesses Player class for chip management and user information
 
 using namespace std;
 
@@ -46,7 +46,7 @@ void playBlackjack(Player &user) {
 		cout << "Starting Blackjack..." << endl;
 
 		Deck deck;    //calls to deck in carddeck
-		double wager = 0;
+		int wager = 0;
 		cout << "You have " << user.chips << " chips. " << endl;
 		cout << "Enter your chip wager: "<< endl;
 		cin >> wager;
@@ -65,10 +65,10 @@ void playBlackjack(Player &user) {
 		playerHand.push_back(deck.dealCard()); //formated to increase fair output
 		dealerHand.push_back(deck.dealCard());
 
-		//cout << "Your hand is " << calculateTotal(playerHand) << endl;
+		//reads the card ranks and suits to the player from hand vector
 		cout << " Your hand is: "; showHand(playerHand);
 		cout << " Dealer reveals: "; showHand(dealerHand);
-									//<< dealerHand[0].rank << " of " << dealerHand[0].suit<<endl;
+		//does the same for the dealer hand vector
 
 		//actual gameplay for player
 		char choice;
@@ -104,9 +104,9 @@ void playBlackjack(Player &user) {
 			cout << "Dealer draws: " << dealerHand.back().rank << " of " << dealerHand.back().suit << endl;
 		}
 
-		int dealerTotal = calculateTotal(dealerHand);
-		cout << "Dealer's total is: " << dealerTotal << endl;
-		cout << "Your total is: " << playerTotal << endl;
+		int dealerTotal = calculateTotal(dealerHand); //assigns int variable to the calculated hand total
+		cout << "Dealer's total is: " << dealerTotal << endl;  //outputs the numerical worth of the dealers hand
+		cout << "Your total is: " << playerTotal << endl;	//outputs the numerical worth of the players hand
 
 		if (dealerTotal > 21 || playerTotal > dealerTotal) {	//if the dealer busts, or the player has a higher
 			cout << "You win +" << wager << "chips!!!" << endl;	//score the player wins
@@ -115,7 +115,7 @@ void playBlackjack(Player &user) {
 			cout <<"The Dealer won this round!  -" << wager << endl;
 			user.chips -= wager;}
 		else {
-			cout << "Wow! You tied with the dealer!" << endl;
+			cout << "Wow! You tied with the dealer!" << endl;  //no chip changes
 		}
 
 		cout << "Would you like to play Blackjack again? Enter Y for yes or any other character to return to menu: " << endl;

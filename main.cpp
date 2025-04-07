@@ -10,8 +10,8 @@ int main() {
   string typedName;
   cout << "Hello! Can you tell me your name?" << endl;
   cin >> typedName;
-
-  Player* user = new Player; //dynamically allocate memory for a new Player object using a pointer
+//dynamically allocate memory for a new Player object using a pointer
+  auto* user = new Player; //auto protects from accidental duplicate types
   user->name = typedName;  //entered name = 'name' field of the Player object
   user->chips = 1000;  //initial chip count
 
@@ -30,7 +30,7 @@ int main() {
     cout<< "Enter a 1, 2, or 3 and choose:"<<endl;
     cin>>choice;
 
-    if (!(choice >= 1 && choice <= 3)) {
+    if (!(choice >= 1 && choice <= 3)) {  //validates against nonscripted inputs
       cin.clear();
       cin.ignore(1000, '\n');
       continue;
@@ -39,7 +39,7 @@ int main() {
 
     switch(choice) {
       case 1:
-        playBlackjack(*user);
+        playBlackjack(*user); //pointer from player struct for chip variable
       break;
       case 2:
         playCasinoWar(*user);
@@ -51,14 +51,14 @@ int main() {
     }
   }
 
-    ofstream outFile("casino_results.txt", ios::trunc);
+    ofstream outFile("casino_results.txt", ios::trunc); //text file is overwritten with current player info
     if (outFile.is_open()) {
       outFile << user->name << " | " << user->chips << endl;
       outFile.close();
     }
   cout << "Thank you for playing today "<< user->name << "! Come back soon to use " << user->chips <<  " chips." <<endl;
 
-  delete user;
+  delete user; //keeps memory stable for the next iteration
 
 
 return 0;
