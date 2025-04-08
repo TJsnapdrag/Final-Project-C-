@@ -10,6 +10,6 @@ struct Player {
   string name;
   int chips;
 };
-//added to text file
+
 
 #endif //PLAYER_H

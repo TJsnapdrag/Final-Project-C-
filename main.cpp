@@ -11,7 +11,7 @@ int main() {
   cout << "Hello! Can you tell me your name?" << endl;
   cin >> typedName;
 //dynamically allocate memory for a new Player object using a pointer
-  auto* user = new Player; //auto protects from accidental duplicate types
+  auto* user = new Player; //auto protects memory from accidental duplicates
   user->name = typedName;  //entered name = 'name' field of the Player object
   user->chips = 1000;  //initial chip count
 

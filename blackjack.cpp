@@ -40,7 +40,7 @@ void showHand(const vector<Card>& hand) {
 
 
 void playBlackjack(Player &user) {
-	//int chips = user.getChips();
+
 	char playAgain = 'y';
 	while (playAgain == 'y' || playAgain == 'Y') {
 		cout << "Starting Blackjack..." << endl;
@@ -79,8 +79,8 @@ void playBlackjack(Player &user) {
 			cin >> choice;
 
 			if (choice == 'H' || choice == 'h') {
-				playerHand.push_back(deck.dealCard());	//takes top card from shuffled deck vector for player hand vector
-				cout << "Your hand is "; showHand(playerHand);
+				playerHand.push_back(deck.dealCard());		//takes top card from shuffled
+				cout << "Your hand is "; showHand(playerHand);	//deck vector for player hand vector
 			} else  if (choice == 'S' || choice == 's') {
 				keepPlaying = false;	//ends current loop and starts dealer draw loop
 			} else {
@@ -100,18 +100,18 @@ void playBlackjack(Player &user) {
 		cout << "Dealer's hand is: ";
 		showHand(dealerHand);
 		while (calculateTotal(dealerHand) < 17) {  //dealer will draw until its hand is >17
-			dealerHand.push_back(deck.dealCard());
+			dealerHand.push_back(deck.dealCard());  //takes a card from deck vector for dealers hand
 			cout << "Dealer draws: " << dealerHand.back().rank << " of " << dealerHand.back().suit << endl;
 		}
 
 		int dealerTotal = calculateTotal(dealerHand); //assigns int variable to the calculated hand total
-		cout << "Dealer's total is: " << dealerTotal << endl;  //outputs the numerical worth of the dealers hand
-		cout << "Your total is: " << playerTotal << endl;	//outputs the numerical worth of the players hand
+		cout << "Dealer's total is: " << dealerTotal << endl; //outputs the numerical worth of the dealers hand
+		cout << "Your total is: " << playerTotal << endl; //outputs the numerical worth of the players hand
 
 		if (dealerTotal > 21 || playerTotal > dealerTotal) {	//if the dealer busts, or the player has a higher
 			cout << "You win +" << wager << "chips!!!" << endl;	//score the player wins
 			user.chips += wager;}
-		else if (dealerTotal > playerTotal) {					//if the dealer has a higher score the player loses
+		else if (dealerTotal > playerTotal) {				//if the dealer has a higher score the player loses
 			cout <<"The Dealer won this round!  -" << wager << endl;
 			user.chips -= wager;}
 		else {

@@ -9,7 +9,7 @@ Deck::Deck(){ //create 4 suits and 13 ranks as strings
   const char* suits[] = {"Clubs", "Diamonds", "Hearts", "Spades"};
   const char* ranks[] = { "2", "3", "4", "5", "6", "7", "8",
                                     "9", "10", "Jack", "Queen", "King", "Ace"};
-    //nested loop iterates suits to then loops a rank to every suit
+    //nested loop iterates suits before looping a rank to every suit
   for (int suitcard = 0; suitcard < 4; suitcard++) {
     for (int rankcard = 0; rankcard < 13; rankcard++) {
       //adds a card from loops to a deck vector
@@ -21,9 +21,9 @@ shuffleDeck(); //randomize deck order on every creation
 
 }
 
-//shuffle function using shuffle and random device
-void Deck::shuffleDeck(){
-  shuffle(cards.begin(), cards.end(), random_device()); //random device makes the returned value less predictable
+//shuffle function toward created deck class objects
+void Deck::shuffleDeck(){     //random device makes the returned value less predictable
+  shuffle(cards.begin(), cards.end(), random_device());
 }
 
 //dealing top card from the deck
